@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" contentent="IE=edge">
+    <meta name="viewport" contentent="width=device-width, initial-scale=1.0">
+    <title>Company Registration</title>
+    <link rel="stylesheet" href="Task1.css">
+    <script src="Task1.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <h2>Registration Form</h2>
+        <hr>
+        <form action="#" class="form">
+
+            <div class="form-content">
+                <label for="name" class="label-title"> CompanyName : </label>
+                <input type="name" class="form-input" id="name" placeholder="Enter Company name" required="required">
+            </div>
+
+
+            <div class="form-content">
+                <label for="email" class="label-title"> Company Email : </label>
+                <input type="email" class="form-input" id="email" placeholder="Enter your email " required="required">
+            </div>
+
+
+            <div class="form-content">
+                <label for="number" class="label-title"> Contact Number : </label>
+                <input type="number" class="form-input" id="mobile" name="mobile" placeholder="Enter Contact number"
+                    required="required">
+            </div>
+
+            <div class="form-content">
+                <label for="Company address" class="label-title"> Company address: </label>
+                <!-- <input type="address" class="form-input" id="address" placeholder="Address" required="required"> -->
+                <textarea  type="address" class="form-input" id="address" placeholder="Address" required="required" cols="30" rows="10"></textarea>
+            </div>
+
+            <div class="form-content">
+                <label for="Count" class="label-title"> Total no of Employees: </label>
+                <input type="number" class="form-input" id="Count" placeholder="Total no of Employees"
+                    required="required">
+            </div>
+            <div>
+                <center>
+                    <button type="submit" onclick="saveData()" id="save_btn" class="btn">Submit</button>
+                </center>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>

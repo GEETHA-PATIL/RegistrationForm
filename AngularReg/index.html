@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" contentent="IE=edge">
+    <meta name="viewport" contentent="width=device-width, initial-scale=1.0">
+    <title>Angular</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script src="index.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/ngstorage/0.3.6/ngStorage.min.js"></script>
+
+</head>
+
+<body ng-app="myModule">
+    <div class="container" ng-controller="myController">
+
+
+        <h2>Registration Form Angular</h2>
+        <hr>
+        <form action="#" class="form" name="form1">
+
+            <div class="form-content">
+                <label for="name" class="label-title"> CompanyName : </label>
+                <input type="name" class="form-input" placeholder="Enter Company name" name="name1"
+                    ng-model="user.companyname" ng-minlength="4" ng-maxlength="32" ng-required="true">
+                <span  ng-show="form1.name1.$dirty && form1.name1.$invalid">Name is not valid</span>
+            </div>
+
+
+
+            <div class="form-content">
+                <label for="email" class="label-title"> Company Email : </label>
+                <input type="email" class="form-input" placeholder="Enter your email " ng-model="user.email"
+                    ng-required="true">
+                <span ng-show="form1.email.$dirty && form1.email.$invalid">Email Address is not valid</span>
+            </div>
+
+
+            <div class="form-content">
+                <label for="number" class="label-title"> Contact Number : </label>
+                <input type="number" class="form-input" placeholder="Enter Contact number" ng-model="user.number"
+                    name="num" ng-required="true" ng-minlength="10" ng-pattern="mobNumberPattern">
+                <span class="error" ng-show="!form1.num.$valid "> 10 digit number required </span>
+
+            </div>
+
+            <div class="form-content">
+                <label for="Company address" class="label-title"> Company address: </label>
+                <textarea type="address" class="form-input" placeholder="Address" ng-model="user.address"
+                    ng-required="true" cols="30" rows="10"></textarea>
+                <span ng-show="form1.address.$dirty && form1.address.$invalid">Address is not valid </span>
+
+            </div>
+
+            <div class="form-content">
+                <label for="Count" class="label-title"> Total no of Employees: </label>
+                <input type="number" class="form-input" placeholder="Total no of Employees" ng-model="user.Count"
+                    ng-required="true">
+                <span ng-show="form1.Count.$dirty && form1.Count.$invalid">Employee count required</span>
+
+            </div>
+            <div>
+                <center>
+                    <button type="submit" value="Save" ng-click="Save(user)" id="save_btn" class="btn"
+                        ng-disabled="form1.user.$dirty || form1.user.$invalid">Submit</button>
+                </center>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
